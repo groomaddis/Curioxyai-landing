@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Curioxy AI — AI Usage Disclosure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08080F; --violet:#6C3CE1; --blue:#3B82F6; --cyan:#00D4FF;
+  --text:#F5F5FA; --text-dim:#9CA0B5; --text-faint:#5C6079;
+  --glass: rgba(255,255,255,0.045); --glass-border: rgba(255,255,255,0.09);
+  --radius:20px; --font-display:'Inter',sans-serif; --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{ background:var(--bg); color:var(--text); font-family:var(--font-display); -webkit-font-smoothing:antialiased; }
+.glow-field{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.glow-field span{ position:absolute; border-radius:50%; filter:blur(90px); opacity:.26; }
+.glow-field span:nth-child(1){ width:460px; height:460px; background:var(--violet); top:-160px; left:-120px; }
+.glow-field span:nth-child(2){ width:400px; height:400px; background:var(--cyan); bottom:-160px; right:-100px; }
+
+.wrap{ position:relative; z-index:1; max-width:760px; margin:0 auto; padding:56px 22px 90px; }
+.eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan); background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.25); padding:6px 13px; border-radius:999px; margin-bottom:18px; }
+.eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--cyan); box-shadow:0 0 8px var(--cyan); }
+h1{ font-size:clamp(26px,4.6vw,36px); font-weight:800; letter-spacing:-0.03em; margin-bottom:12px; }
+.updated{ font-family:var(--font-mono); font-size:11.5px; color:var(--text-faint); margin-bottom:36px; }
+
+.card{ background:var(--glass); border:1px solid var(--glass-border); border-radius:var(--radius); padding:28px; margin-bottom:20px; }
+.card h2{ font-size:16px; font-weight:700; margin-bottom:12px; }
+.card p{ font-size:14.5px; color:var(--text-dim); line-height:1.65; margin-bottom:12px; }
+.card p:last-child{ margin-bottom:0; }
+.card a{ color:var(--cyan); text-decoration:none; border-bottom:1px solid rgba(0,212,255,0.35); }
+.card a:hover{ border-color:var(--cyan); }
+
+.rule-box{ border-left:2px solid var(--cyan); padding:16px 20px; background:rgba(0,212,255,0.04); border-radius:0 12px 12px 0; margin:16px 0; }
+.rule-box p{ color:var(--text); font-weight:600; font-size:14.5px; margin:0; }
+
+.link-list{ display:flex; flex-direction:column; gap:10px; margin-top:14px; }
+.link-row{ display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid var(--glass-border); border-radius:12px; }
+.link-row .label{ font-size:13.5px; color:var(--text-dim); }
+.link-row a{ font-family:var(--font-mono); font-size:12.5px; }
+
+footer{ text-align:center; color:var(--text-faint); font-size:11.5px; margin-top:48px; font-family:var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="glow-field"><span></span><span></span></div>
+<div class="wrap">
+
+  <span class="eyebrow"><span class="dot"></span>AI Usage Disclosure</span>
+  <h1>How Curioxy AI uses AI</h1>
+  <div class="updated">Last updated: [DATE] · Required disclosure per Kickstarter's AI policy</div>
+
+  <div class="card">
+    <h2>What AI does in this product</h2>
+    <p>Curioxy AI uses Claude, built by Anthropic, to identify items from photos. That's the entire scope of AI in this product — you point your camera at something, and Claude tells us what it is.</p>
+    <div class="rule-box"><p>Everything after identification is real data, not AI. Marketplace listings, prices, and condition information come directly from live marketplace APIs — never generated, estimated, or predicted by AI, under any circumstance.</p></div>
+  </div>
+
+  <div class="card">
+    <h2>What's AI-made vs. human-made</h2>
+    <p><strong>AI-powered:</strong> the item-identification step only.</p>
+    <p><strong>Human-made:</strong> the app's design and product decisions, all campaign materials (video, copy, imagery), and all marketplace search and display logic. No campaign imagery or video content is AI-generated.</p>
+  </div>
+
+  <div class="card">
+    <h2>Training data, consent, and credit</h2>
+    <p>We integrate Claude via Anthropic's existing API — we are not training our own AI model from scratch, and we do not collect or curate our own training dataset. Questions about how the underlying model was trained, and Anthropic's approach to consent and credit for that training data, are governed entirely by Anthropic's own policies, not by us. We link to their current policies below rather than restate them, since summarizing someone else's legal terms risks getting them wrong.</p>
+    <div class="link-list">
+      <div class="link-row"><span class="label">Anthropic's Privacy Policy</span><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy →</a></div>
+      <div class="link-row"><span class="label">Anthropic's Usage Policy</span><a href="https://www.anthropic.com/legal" target="_blank" rel="noopener">anthropic.com/legal →</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Why this matters to us</h2>
+    <p>Curioxy AI exists because AI-generated guesses about what something's worth aren't trustworthy — that's the whole premise of the product. We hold ourselves to the same standard with AI transparency generally: say exactly what the AI does, say exactly what it doesn't do, and don't blur the two.</p>
+  </div>
+
+  <footer>CURIOXY AI — AI USAGE DISCLOSURE — REQUIRED KICKSTARTER PROJECT PAGE LINK</footer>
+</div>
+</body>
+</html>
